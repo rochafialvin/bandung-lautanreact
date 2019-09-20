@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// React di perlukan untuk dapat membuat / membaca / mengetahui cara kerja dari komponen
+import React from 'react'
+// ReactDOM akan me render komponen App di file index.html di tag div id root
+import ReactDOM  from 'react-dom'
+// App adalah komponen induk dari semua komponen yang ada
+// komponen yang dibutuhkan akan berkumpul di App.js
+// Di import dari alamat file App berada, ini hanya memungkinkan jika file App sudah melakukan proses export
+import App from './components/App.jsx'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Proses rendering
+// Me-render komponen App di div dengan id root
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+)
