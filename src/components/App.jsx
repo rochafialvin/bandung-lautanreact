@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import SearchBar from './SearchBar'
+
 // Membuan komponen dengan menggunakan class
 class App extends Component{
 
@@ -7,8 +9,9 @@ class App extends Component{
     // function render hanya boleh me return satu element, biasanya div, tapi tidak harus
     render(){
         return(
-            <div>
-                <h1>Component App</h1>
+            <div className='container'>
+                <h1 className='text-center mt-3 mb-5'>Image Search Engine</h1>
+                <SearchBar/>
             </div>
         )
     }
