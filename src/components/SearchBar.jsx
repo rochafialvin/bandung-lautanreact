@@ -12,8 +12,7 @@ class SearchBar extends Component {
         // function yang akan men-cancel halaman dari refresh
         e.preventDefault()
 
-        this.props.asdf(this.state.term)
-
+        this.props.sama(this.state.term)
     }
 
     render(){

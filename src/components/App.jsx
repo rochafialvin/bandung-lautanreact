@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 
 import SearchBar from './SearchBar'
 
@@ -7,7 +8,23 @@ class App extends Component{
 
     
     onSearchSubmit = (term) => {
-        console.log(term)
+        // Request gambar ke unsplash
+        axios.get(
+            'https://api.unsplash.com/search/photos',
+            {
+                headers: {
+                    Authorization: 'Client-ID 9b72bbe94e1fef52e4486fe765f5ea334c0fe78ac2d1ea0474d5abc43d329065'
+                },
+
+                params: {
+                    query: term
+                }
+            }
+        ).then( (res) => {
+            // OBJECT YANG PUNYA BANYAK PROPERTY
+            console.log(res.data.results)
+        
+        })
 
     }
 
@@ -16,7 +33,7 @@ class App extends Component{
         return(
             <div className='container'>
                 <h1 className='text-center mt-3 mb-5'>Image Search Engine</h1>
-                <SearchBar asdf={this.onSearchSubmit} />
+                <SearchBar sama={this.onSearchSubmit} />
             </div>
         )
     }
