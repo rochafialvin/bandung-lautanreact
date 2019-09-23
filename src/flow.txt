@@ -1,0 +1,5 @@
+1. User akan input text
+2. App akan menerima text
+3. Text dari user di gunakan untuk request kemudian menerima respon
+4. Dari respon kita ambil link gambar
+5. Render image berdasarkan link gambar yang ada.
