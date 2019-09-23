@@ -6,7 +6,11 @@ import SearchBar from './SearchBar'
 // Membuan komponen dengan menggunakan class
 class App extends Component{
 
-    
+    state = {
+        pictures: []
+    }
+
+    // term adalah inputan dari user di komponen Search Bar
     onSearchSubmit = (term) => {
         // Request gambar ke unsplash
         axios.get(
@@ -21,8 +25,8 @@ class App extends Component{
                 }
             }
         ).then( (res) => {
-            // OBJECT YANG PUNYA BANYAK PROPERTY
-            console.log(res.data.results)
+            // then akan di jalankan ketika proses request berhasil
+            this.setState( {pictures: res.data.results} )
         
         })
 
