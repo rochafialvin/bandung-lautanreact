@@ -3,11 +3,25 @@ import React, {Component} from 'react'
 class ImageList extends Component{
 
 
+    // Function untuk map dari object menjadi image
+    renderImages = () => {
+        // gambars = [ {}, {}, {} ]
+        // gambar = {id, description, urls, ...}
+        let hasil = this.props.gambars.map( (gambar) => {
+            return (
+                <img src={gambar.urls.regular} />
+            )
+        } )
+
+        // [<img>, <img>, <img]
+        return hasil
+    }
+
 
     render(){
         return (
             <div>
-                <h3>Jumlah Gambar: {this.props.gambars.length}</h3>
+                { this.renderImages() }
             </div>
         )
     }
