@@ -12,6 +12,7 @@ class SearchBar extends Component {
         // function yang akan men-cancel halaman dari refresh
         e.preventDefault()
 
+        // term akan di ambil oleh component App.jsx
         this.props.sama(this.state.term)
     }
 
