@@ -9,19 +9,19 @@ class ImageList extends Component{
         // gambar = {id, description, urls, ...}
         let hasil = this.props.gambars.map( (gambar) => {
             return (
-                <img src={gambar.urls.regular} />
+                <img className='card' src={gambar.urls.regular} />
             )
         } )
 
-        // [<img>, <img>, <img]
+        
         return hasil
     }
 
 
     render(){
         return (
-            <div>
-                { this.renderImages() }
+            <div className='card-columns'>
+                {this.renderImages()}
             </div>
         )
     }
